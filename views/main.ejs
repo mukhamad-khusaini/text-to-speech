@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Text to Speech Generator</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            form {
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            form label {
+                text-align: center;
+                margin-top: 2rem;
+            }
+
+            form textarea {
+                width: 30rem;
+                height: 5rem;
+                padding: 0.6rem 1rem;
+                outline: none;
+            }
+
+            form select {
+                padding: 0.3rem 1rem;
+            }
+
+            button {
+                padding: 0.6rem 2rem;
+                border: none;
+                border-radius: 0.7rem;
+                background-color: rgb(230, 172, 47);
+                font-weight: bold;
+                margin-top: 2rem;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: rgb(155, 116, 33);
+            }
+        </style>
+    </head>
+    <body>
+        <form action="voice" method="post">
+            <label for="text">Input Text</label>
+            <textarea name="text" id="text"></textarea>
+
+            <label for="language">Choose language</label>
+            <select name="language" id="language">
+                <option value="en-us">English</option>
+                <option value="id">Indonesia</option>
+                <option value="ja">Japan</option>
+                <option value="ko">Korea</option>
+                <option value="ar">Arabic</option>
+            </select>
+
+            <button type="submit">Generate</button>
+        </form>
+    </body>
+</html>
